@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Intro to Javascript</title>
+<script>
+        function add2Numbers() {
+            var num1 = parseFloat(document.getElementById('num1').value);
+            var num2 = parseFloat(document.getElementById('num2').value);
+            document.getElementById("result").innerHTML = num1 + num2;
+        }
+        function sub2Numbers() {
+            var num1 = parseFloat(document.getElementById('num1').value);
+            var num2 = parseFloat(document.getElementById('num2').value);
+            document.getElementById("result").innerHTML = num1 - num2;
+        }
+        function mul2Numbers() {
+            var num1 = parseFloat(document.getElementById('num1').value);
+            var num2 = parseFloat(document.getElementById('num2').value);
+            document.getElementById("result").innerHTML = num1 * num2;
+        }
+        function div2Numbers() {
+            var num1 = parseFloat(document.getElementById('num1').value);
+            var num2 = parseFloat(document.getElementById('num2').value);
+            document.getElementById("result").innerHTML = num1 / num2;
+        }
+        function dur2Numbers() {
+            var num1 = parseFloat(document.getElementById('num1').value);
+            var num2 = parseFloat(document.getElementById('num2').value);
+            document.getElementById("result").innerHTML = (num1 + num2) / 2;
+        }
+        function pow2Numbers() {
+            var num1 = parseFloat(document.getElementById('num1').value);
+            var num2 = parseFloat(document.getElementById('num2').value);
+            document.getElementById("result").innerHTML = Math.pow(num1, num2);
+        }
+        function sqrtNumber() {
+            var num1 = parseFloat(document.getElementById('num1').value);
+            var num2 = parseFloat(document.getElementById('num2').value);
+            document.getElementById("result").innerHTML = Math.pow(num1, 1 / num2);
+        }
+        function logNumber() {
+            var num1 = parseFloat(document.getElementById('num1').value);
+            var num2 = parseFloat(document.getElementById('num2').value);
+            document.getElementById("result").innerHTML = Math.log(num1) /Math.log(num2);
+        }
+</script>
+</head>
+<body>
+<h1 id="myheading">Taschenrechner</h1>
+<form>
+<label for="num1">Erste Zahl:</label>
+<input type="text" id="num1" name="num1"><br><br>
+<label for="num2">zweite Zahl:</label>
+<input type="text" id="num2" name="num2"><br><br>
+</form>
+<button onclick="add2Numbers()">+</button>
+<button onclick="sub2Numbers()">-</button>
+<button onclick="mul2Numbers()">*</button>
+<button onclick="div2Numbers()">/</button>
+<button onclick="dur2Numbers()">Durchschnitt</button>
+<button onclick="pow2Numbers()">^</button>
+<button onclick="sqrtNumber()">&#8730;</button>
+<button onclick="logNumber()">&#x33D2;</button>
+<p id="result"></p>
+</body>
+</html>
